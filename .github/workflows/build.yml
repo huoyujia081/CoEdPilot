@@ -25,3 +25,16 @@ jobs:
       #   timeout-minutes: 5
       #   env:
       #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  # You may pin to the exact commit or the version.
+  # uses: py-actions/py-dependency-install@30aa0023464ed4b5b116bd9fbdab87acf01a484e
+      - uses: py-actions/py-dependency-install@v4
+        with:
+    	# Path to requirements.txt file
+            path: # optional, default is requirements.txt
+    # Boolean for pip upgrade prior to the dependency installation (default='true')
+        update-pip: # optional, default is true
+    # Boolean for setuptools install/upgrade prior to the dependency installation (default='true')
+        update-setuptools: # optional, default is true
+    # Boolean for wheel install/upgrade prior to the dependency installation (default='true')
+        update-wheel: # optional, default is true
+          

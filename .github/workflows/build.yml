@@ -35,3 +35,14 @@ jobs:
           # update-setuptools: # optional, default is true
           # Boolean for wheel install/upgrade prior to the dependency installation (default='true')
           # update-wheel: # optional, default is true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install the code linting and formatting tool Ruff
+        run: pip3 install ruff
+      - name: Lint code with Ruff
+        run: ruff check --output-format=github --target-version=py39
+      - name: Check code formatting with Ruff
+        run: ruff format --diff --target-version=py310
+        continue-on-error: true

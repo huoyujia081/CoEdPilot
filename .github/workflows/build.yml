@@ -28,10 +28,10 @@ jobs:
       - uses: py-actions/py-dependency-install@v4
         with:
           # Path to requirements.txt file
-          path: # optional, default is requirements.txt
+          path: requirements.txt # optional, default is requirements.txt
           # Boolean for pip upgrade prior to the dependency installation (default='true')
-          update-pip: # optional, default is true
+          # update-pip: # optional, default is true
           # Boolean for setuptools install/upgrade prior to the dependency installation (default='true')
-          update-setuptools: # optional, default is true
+          # update-setuptools: # optional, default is true
           # Boolean for wheel install/upgrade prior to the dependency installation (default='true')
-          update-wheel: # optional, default is true
+          # update-wheel: # optional, default is true
